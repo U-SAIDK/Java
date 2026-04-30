@@ -1,0 +1,70 @@
+package DSA;
+
+** The Collections Framework ** is a set of interfaces + classes in Java that helps you work with groups of data (called collections).
+
+/// The collections framework is a unified architecture for representing and manipulating collections,
+/// Enabling them to be manipulated independently of the details of their representation.
+
+/// Core Hierarchy:-
+//    Iterable
+//       |
+//    Collection (Interface)
+//       |
+//       |---- List
+//       |       |--- ArrayList
+//       |       |--- LinkedList
+//       |
+//       |---- Set
+//       |       |--- HashSet
+//       |       |--- TreeSet
+//       |
+//        |---- Queue
+//               |--- PriorityQueue
+//
+//    Map (Separate Hierarchy)
+//       |--- HashMap
+//       |--- TreeMap
+
+
+/// Common methods:
+//    add()
+//    remove()
+//    size()
+//    isEmpty()
+//    contains()
+//    clear()
+
+
+/// OverView
+//        | Interface | Class         |               Description                                                   |
+//        |-----------|---------------|--------------------------------------------------------------|
+//        | List      | ArrayList     | Resizable array that maintains order and allows duplicates   |
+//        | List      | LinkedList    | List with fast insert and remove operations                  |
+//        | Set       | HashSet       | Unordered collection of unique elements                      |
+//        | Set       | TreeSet       | Sorted set of unique elements (natural order)                |
+//        | Set       | LinkedHashSet | Maintains the order in which elements were inserted          |
+//        | Map       | HashMap       | Stores key/value pairs with no specific order                |
+//        | Map       | TreeMap       | Sorted map based on the natural order of keys                |
+//        | Map       | LinkedHashMap | Maintains the order in which keys were inserted              |
+
+
+
+/// Use List classes when you care about order, you may have duplicates, and want to access elements by index.
+/// Use Set classes when you need to store unique values only.
+/// Use Map classes when you need to store pairs of keys and values, like a name and its phone number.
+
+
+// Map vs. Set vs. List
+
+| Feature                        | **List**                              | **Set**                                   | **Map**                                         |
+| ------------------------------ | ------------------------------------- | ----------------------------------------- | ----------------------------------------------- |
+| **Purpose**                    | Stores ordered collection of elements | Stores unique elements                    | Stores key–value pairs                          |
+| **Duplicates Allowed?**        | ✅ Yes                                 | ❌ No                                      | **Keys:** ❌ No <br> **Values:** ✅ Yes           |
+| **Stores Key–Value Pairs?**    | ❌ No                                  | ❌ No                                      | ✅ Yes                                           |
+| **Maintains Insertion Order?** | ✅ Yes                                 | ❌ No *(HashSet)* <br> ✅ *(LinkedHashSet)* | ❌ No *(HashMap)* <br> ✅ *(LinkedHashMap)*       |
+| **Sorted Order Support?**      | ❌ No (default)                        | ✅ TreeSet                                 | ✅ TreeMap (by keys)                             |
+| **Index-Based Access?**        | ✅ Yes                                 | ❌ No                                      | ❌ No (access via key)                           |
+| **Null Allowed?**              | ✅ Yes                                 | ✅ One null (HashSet)                      | ✅ One null key + multiple null values (HashMap) |
+| **Common Implementations**     | ArrayList, LinkedList                 | HashSet, TreeSet                          | HashMap, TreeMap                                |
+| **Access Method**              | `get(index)`                          | Iterator / loop                           | `get(key)`                                      |
+| **Best Use Case**              | Ordered data / duplicates allowed     | Unique collection                         | Fast lookup using keys                          |
