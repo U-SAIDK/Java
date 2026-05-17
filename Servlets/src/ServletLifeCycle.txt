@@ -1,0 +1,241 @@
+
+                SERVLET LIFECYCLE COMPLETE FLOW
+
+┌──────────────────────────────────────────────────────────────┐
+│ 1. SERVER STARTS (Tomcat Starts)                            │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Tomcat scans project for @WebServlet annotations
+                              ↓
+        Finds:
+        @WebServlet("/ServletLife")
+                              ↓
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 2. CLASS LOADING                                             │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        JVM loads ServletLife.class into memory
+                              ↓
+        Static block executes automatically
+                              ↓
+
+        static {
+            System.out.println("Servlet Class is Loaded");
+        }
+
+                              ↓
+        Output:
+        "Servlet Class is Loaded"
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 3. OBJECT CREATION                                           │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Servlet Container (Tomcat) creates servlet object
+                              ↓
+
+        new ServletLife()
+
+                              ↓
+        Constructor executes
+                              ↓
+
+        public ServletLife() {
+            System.out.println("Servlet Object is Created");
+        }
+
+                              ↓
+        Output:
+        "Servlet Object is Created"
+
+                              ↓
+        IMPORTANT:
+        ✔ Object created only ONCE
+        ✔ Same object handles multiple requests
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 4. INITIALIZATION PHASE                                      │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Container calls init() method automatically
+                              ↓
+
+        init()
+
+                              ↓
+        Used for:
+        ✔ Database connection
+        ✔ Reading config file
+        ✔ Loading JDBC Driver
+        ✔ Resource initialization
+
+                              ↓
+        Runs ONLY ONCE during servlet life
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 5. CLIENT SENDS HTTP REQUEST                                 │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Browser Request:
+        http://localhost:8080/MyProject/ServletLife
+
+                              ↓
+        Tomcat receives request first
+                              ↓
+
+        Container creates:
+        ✔ HttpServletRequest object
+        ✔ HttpServletResponse object
+
+                              ↓
+        Request Object Contains:
+        ✔ Form data
+        ✔ URL parameters
+        ✔ Headers
+        ✔ Cookies
+        ✔ Session info
+        ✔ Client IP
+
+                              ↓
+        Response Object Used For:
+        ✔ Sending HTML
+        ✔ Sending text/data
+        ✔ Sending status codes
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 6. REQUEST PROCESSING                                        │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Container calls:
+
+        service(request,response)
+
+                              ↓
+        service() checks HTTP request type
+                              ↓
+
+        ┌───────────────┬────────────────────┐
+        │ Request Type  │ Method Called      │
+        ├───────────────┼────────────────────┤
+        │ GET           │ doGet()            │
+        │ POST          │ doPost()           │
+        │ PUT           │ doPut()            │
+        │ DELETE        │ doDelete()         │
+        └───────────────┴────────────────────┘
+
+                              ↓
+        Example:
+        If form method="post"
+                              ↓
+        service()
+             ↓
+        doPost()
+
+                              ↓
+        Your business logic executes here
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 7. RESPONSE SENT BACK TO CLIENT                              │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+
+        PrintWriter out = response.getWriter();
+
+        out.println("Hello User");
+
+                              ↓
+        Container converts response into HTTP response
+                              ↓
+        Browser receives response
+                              ↓
+        User sees output on webpage
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 8. MULTIPLE USERS ACCESSING SERVLET                          │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Tomcat DOES NOT create multiple servlet objects
+                              ↓
+
+        ✔ One Servlet Object
+        ✔ Multiple Threads
+
+                              ↓
+        Each request handled by separate thread
+
+                              ↓
+        IMPORTANT:
+        Avoid unsafe instance variables
+
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 9. SERVER SHUTDOWN / APPLICATION STOP                        │
+└──────────────────────────────────────────────────────────────┘
+                              ↓
+        Container calls:
+
+        destroy()
+
+                              ↓
+        Used for cleanup:
+        ✔ Close DB connections
+        ✔ Release resources
+        ✔ Stop background threads
+
+                              ↓
+        Output:
+        "Servlet is Destroyed"
+
+                              ↓
+        Servlet removed from memory
+
+
+
+══════════════════════════════════════════════════════════════════
+
+                WHAT SERVLET CONTAINER HANDLES
+
+══════════════════════════════════════════════════════════════════
+
+✔ Loading servlet class
+✔ Creating servlet object
+✔ Managing servlet lifecycle
+✔ Calling init()
+✔ Creating request/response objects
+✔ Calling service()
+✔ Managing threads
+✔ Session management
+✔ URL mapping
+✔ Security handling
+✔ Sending response back
+✔ Calling destroy()
+
+══════════════════════════════════════════════════════════════════
+
+                WHAT DEVELOPER WRITES
+
+══════════════════════════════════════════════════════════════════
+
+✔ Business Logic
+✔ Request Processing
+✔ Database Operations
+✔ Response Generation
+✔ Validation Logic
+
+══════════════════════════════════════════════════════════════════
+```
