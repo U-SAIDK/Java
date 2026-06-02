@@ -1,8 +1,16 @@
  package OOP.Static;
 
-///  Static  = Makes a Variable or Method
-///           Belong To a Class & Common to All the Objects
+///  Static  = Makes a Variable or Method Belong To a Class & Common to All the Objects
 ///           Commonly Used for Utility Methods or Shared Resources
+
+/// The static keyword in Java is used to indicate that a member (variable, method, block, or nested
+/// class) belongs to the class itself rather than to any specific object of the class.
+// Static members are shared among all objects and can be accessed using the class name.
+// Key Characteristics:-
+// Shared among all instances of the class.
+// Can be accessed without creating an object.
+// Memory is allocated only once when the class is loaded.
+// Used for common data and utility methods.
 
 ///  Ex 1:- Static Variables
 ///  Static members belong to the CLASS, not individual objects
