@@ -1,0 +1,19 @@
+⭐ Member Type Indicators
+
+| Symbol | Full Form                 |
+| ------ | ------------------------- |
+| c      | Class                     |
+| C      | Constructor               |
+| m      | Method                    |
+| f      | Field (Instance Variable) |
+| v      | Variable (Local Variable) |
+| p      | Parameter                 |
+| I      | Interface                 |
+| e      | Enum (Enumeration)        |
+| a      | Annotation                |
+| k      | Keyword                   |
+| pkg    | Package                   |
+| λ      | Lambda Expression         |
+| s      | Static Member             |
+| g/s    | Getter / Setter           |
+

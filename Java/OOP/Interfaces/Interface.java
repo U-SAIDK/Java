@@ -1,5 +1,6 @@
 package OOP.Interfaces;
 
+/// An interface in Java is a blueprint of behavior that defines a contract which implementing classes must fulfill.
 ///  Another way to achieve abstraction in Java, is with interfaces.
 ///  Interface = A blueprint of a class , that is used to group related methods with empty bodies:
 ///  Supports Mutiple inheritance-like Behavior

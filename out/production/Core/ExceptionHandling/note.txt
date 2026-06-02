@@ -1,0 +1,117 @@
+===============================
+EXCEPTIONS (Simple Notes)
+===============================
+
+1. What is Exception?
+----------------------
+An Exception is an error that happens during program execution.
+
+Example:
+Divide by zero → error
+
+----------------------
+
+2. Why use Exception Handling?
+------------------------------
+- Prevent program crash
+- Handle errors properly
+- Continue program execution
+
+----------------------
+
+3. Types of Exceptions
+----------------------
+
+A. Checked Exceptions
+- Checked at compile time
+- Must handle using try-catch or throws
+
+Examples:
+- IOException
+- SQLException
+
+----------------------
+
+B. Unchecked Exceptions (Runtime)
+- Occur during runtime
+- Not mandatory to handle
+
+Examples:
+- ArithmeticException
+- NullPointerException
+- ArrayIndexOutOfBoundsException
+
+----------------------
+
+4. Exception Handling Keywords
+------------------------------
+
+A. try
+- Write risky code here
+
+B. catch
+- Handles exception
+
+C. finally
+- Always executes (cleanup code)
+
+D. throw
+- Used to manually throw exception
+
+E. throws
+- Declares exception in method
+
+----------------------
+
+5. Basic Syntax
+----------------------
+
+try {
+    // risky code
+}
+catch(Exception e) {
+    // handle error
+}
+finally {
+    // always runs
+}
+
+----------------------
+
+6. Multiple Catch
+----------------------
+
+try {
+    // code
+}
+catch(ArithmeticException e) {
+}
+catch(NullPointerException e) {
+}
+
+----------------------
+
+7. Important Points
+----------------------
+
+- Only one catch block runs
+- finally always executes (except system crash)
+- try must have catch or finally
+- Order: try → catch → finally
+
+----------------------
+
+8. Common Exceptions
+----------------------
+
+- ArithmeticException → divide by zero
+- NullPointerException → null object
+- ArrayIndexOutOfBounds → wrong index
+- NumberFormatException → wrong format
+
+----------------------
+
+9. Custom Exception
+----------------------
+
+You can create your own exception.

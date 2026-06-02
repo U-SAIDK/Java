@@ -1,0 +1,10 @@
+package DSA;
+
+/// Data structures are ways to store and organize data so you can use it efficiently.
+/// Ex - Some of the most common are: ArrayList , HashSet , HashMap
+
+//        | Data Structure| Stores             | Keeps Order? | Allows Duplicates?        | Best For                          |
+//        |---------------|--------------------|--------------|---------------------------|-----------------------------------|
+//        | ArrayList     | Ordered elements   | Yes          | Yes                       | Accessing elements by index       |
+//        | HashSet       | Unique elements    | No           | No                        | Avoiding duplicates, fast checks  |
+//        | HashMap       | Key-value pairs    | No           | Yes (keys are unique)     | Fast lookup by key                |
