@@ -1,7 +1,7 @@
-package Basics.Variables; //// Variables are containers for storing data values.
-             ////  Types of Variables in Java :- int ,float ,char , String, boolean
+ //// Variables are containers for storing data values.
+////  Types of Variables in Java :- int ,float ,char , String, boolean
 
-
+ package Basics.Variables;
 
   public class  Variable {
 

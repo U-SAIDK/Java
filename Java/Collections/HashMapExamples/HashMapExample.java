@@ -1,14 +1,14 @@
 package Collections.HashMapExamples;
 import java.util.HashMap; // Import the HashMap class
 
-/// A HashMap stores items in key/value pairs, where each key maps to a specific value.
-/// Instead of accessing elements by an index (like with ArrayList), you use a key to retrieve its associated value.
-/// It is part of the java.util package and implements the Map interface
+///   A HashMap stores items in key/value pairs, where each key maps to a specific value.
+///   Instead of accessing elements by an index (like with ArrayList), you use a key to retrieve its associated value.
+///   It is part of the java.util package and implements the Map interface
 ////  A HashMap can store many different combinations, such as:
 ///   String keys and Integer values OR String keys and String values etc....
 
 
-//public class HashMapExample {
+//   public class HashMapExample {
 //   public static void main(String[] args) {
 //
 //   HashMap<String, String> capitals = new HashMap<>();
@@ -20,7 +20,7 @@ import java.util.HashMap; // Import the HashMap class
 //   capitals.put("Afghanistan", "Kandahar");
 //   capitals.put("USA", "Washington DC");
 //   capitals.put("USA", "Khorasan"); // These Value will Overide
-//                                   // A Key is unique(Immutable) But values can be Overridden
+//                                    // A Key is unique(Immutable) But values can be Overridden
 //
 //   // Other methods
 //   capitals.get("India"); // To access a value ;get() method and refer to its key
@@ -59,7 +59,7 @@ import java.util.HashMap; // Import the HashMap class
 //       System.out.println(capitalcity);
 //    }
 //
-//// // Print keys and values
+// // Print keys and values
 //     for (String cities : capitalCities.keySet())
 //     {
 //         System.out.println("key: " + cities + " -> values: " + capitalCities.get(cities));

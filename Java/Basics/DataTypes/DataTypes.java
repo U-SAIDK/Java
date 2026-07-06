@@ -9,7 +9,7 @@ package Basics.DataTypes;
 // For Primitive - JRE Allocates & Releases memory Autmatically.(NO Manual)
 // For Reference - We Allocate Memory(Manually) & JRE releases it Automatically
 
-//There are eight primitive data types in Java:
+// There are eight primitive data types in Java:
 // Data Type	      Suffix              Description
 // byte	                --          Stores whole numbers from -128 to 127
 // short	            --          Stores whole numbers from -32,768 to 32,767
@@ -23,7 +23,7 @@ package Basics.DataTypes;
 // There can be Multiple Objects As it is Created by User but here are few Examples - string , array , object
 
 
-// #  Ex -1 Primitive DataType
+// #  Ex :- 1  Primitive DataType
 public class DataTypes {
 
  public static void main(String[] args) {

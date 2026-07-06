@@ -6,7 +6,7 @@ import java.util.Scanner;
 ///                                 At Runtime Based on the Actual Type of Object.
 
 ///  The method that runs is decided while the program is running, not during compilation.
-/// Java decides which method to call based on the actual object type, not the reference type.
+///  Java decides which method to call based on the actual object type, not the reference type.
 
 public class RuntimePolymorphism {
     public static void main(String[] args) {

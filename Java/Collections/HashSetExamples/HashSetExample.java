@@ -38,7 +38,7 @@ import java.util.HashSet;
 
 
 /// Var Keyword :- var keyword to declare a HashSet variable without writing the type twice
-//public class HashSetExample {
+//   public class HashSetExample {
 //   public static void main(String[] args) {
 //
 //// Using var instead of :- HashSet<String> cars = new HashSet<String>();

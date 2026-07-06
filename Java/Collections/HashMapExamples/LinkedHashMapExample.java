@@ -2,7 +2,7 @@ package Collections.HashMapExamples;
 import java.util.LinkedHashMap;
 
 ///  A LinkedHashMap stores keys and values, and keeps them in the same order you put them in.
-/// Use LinkedHashMap when you want predictable iteration order (insertion order).
+///  Use LinkedHashMap when you want predictable iteration order (insertion order).
 
 
 public class LinkedHashMapExample {

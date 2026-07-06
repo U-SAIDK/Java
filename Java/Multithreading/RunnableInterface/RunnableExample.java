@@ -6,17 +6,17 @@ package Multithreading.RunnableInterface;
 
 /// Uses interface {Runnable} as it is Mandaory in interfaces to override its method [run]
 
-public class RunnableExample implements Runnable{
+public class RunnableExample implements Runnable {
 
- // Run here is the Method of Runnable (interface)
- // We Override it as per our Need
- // Anything inside run() executes on a SEPARATE THREAD.
+ //  Run here is the Method of Runnable (interface)
+ //  We Override it as per our Need
+ //  Anything inside run() executes on a SEPARATE THREAD.
 
  @Override
  public void run() {
      for (int i = 1; i <= 5; i++) {
 
-         // As these is Risky/Dangerous Code we do it in try
+         // As These is Risky/Dangerous Code we do it in try
          try{
              Thread.sleep(1000); // Background Thread Sleeps for 1000 ms(1s) for each iterations
          }                             // 1000 x 5 = 5 sec ; Main thread still runs normally
